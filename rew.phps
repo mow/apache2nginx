@@ -449,9 +449,13 @@ class rewriteConf {
 				}				
 				if(!isset($isReturned)){
 					if($conf["rule"]["flags"]["unknown"] != 1){
-						if(!empty(trim($conf["rule"]["trueExp"])))
+
+						if(!empty($conf["rule"]["trueExp"]))
+						{
 							$ret.= 'if ($rule_'.$r.' = "'.$conf["rule"]["trueExp"].'"){
 ';
+						}
+						
 						if($conf["rule"]["flags"]["return"] < 1){
 							
 							if(is_array($conf["rule"]["flags"]["set"])){
@@ -485,9 +489,11 @@ class rewriteConf {
 ';
 							}
 						}
-						if(!empty(trim($conf["rule"]["trueExp"])))
+						if(!empty($conf["rule"]["trueExp"]))
+						{
 							$ret.='}
 ';
+						}
 					} else {
 						$ret.= '#ignored: unknown variable in rule flag
 ';
