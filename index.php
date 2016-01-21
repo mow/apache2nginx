@@ -58,7 +58,7 @@ if (!empty($_POST['rules'])) {
     </p>
 </aside>
 <footer>
-    A converter by Mow - UI by <a href="http://ownweb.fr">OwnWeb</a>
+    A converter by <a href="http://anilcetin.com">Mow</a> - UI by <a href="http://ownweb.fr">OwnWeb</a>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="app.js"></script>
