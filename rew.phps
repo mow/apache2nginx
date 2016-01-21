@@ -1,10 +1,10 @@
 <?php
 class rewriteConf {
-
+/*
 	function __construct($htContent){
 		$this->htContent = $htContent;
 	}
-
+*/
 	function parseLine($line){
 		list($cmd,$regex,$rew,$flags) = explode(" ",$line);
 		if(!empty($flags)){
@@ -18,7 +18,7 @@ class rewriteConf {
 		$lines = explode("\n",$this->htContent);
 		$i = 0;
 		foreach($lines as $line){
-		    $line = trim($line);
+			$line = trim($line);
 			if($line[0] != '#' && !empty($line[0])){
 				if(strpos($line,"RewriteCond") !== false){
 					if(!isset($k))$k = 0;
